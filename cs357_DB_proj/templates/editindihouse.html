@@ -1,0 +1,20 @@
+$def with (house, form)
+
+<h1>Edit House: $house.idHouse</h1>
+<li>Monthly price: <B>$house.price</B></li>
+<li>House type: <B>$house.type</B>.</li>
+<li>House Location: <B>$house.locationHouse</B>.</li>
+<li>capacity: <B>$house.cap</B> </li>
+
+
+
+
+<form action="" method="post">
+$:form.render()
+</form>
+
+
+<h2>Delete House $house.idHouse</h2>
+<form action="/deletehouse/$house.idHouse" method="post">
+    <input type="submit" value="Delete this House"/>
+</form>

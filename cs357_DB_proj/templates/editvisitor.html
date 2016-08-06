@@ -1,0 +1,13 @@
+$def with (visitor, form)
+
+<h1>Edit User: $visitor.Client_username</h1>
+
+<form action="" method="post">
+$:form.render()
+</form>
+
+
+<h2>Delete $visitor.Client_username</h2>
+<form action="/deletevisitor/$visitor.Client_username/$visitor.dateVisit" method="post">
+    <input type="submit" value="Delete Visitor"/>
+</form>

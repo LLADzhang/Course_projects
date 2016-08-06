@@ -1,0 +1,15 @@
+$def with (agencies, form)
+
+<h1>This page shows all agencies' infomation</h1>
+
+<ul>
+$for agent in agencies:
+    <li>
+        The telephone number of Agent <B><a href="/agency/$agent.idAgency">$agent.idAgency</a></B>
+         is <B>$agent.telephone</B> and he lives in <B>$agent.locationAgency</B>
+    </li>
+</ul>
+
+<form action="" method="post">
+$:form.render()
+</form>

@@ -1,0 +1,17 @@
+$def with (order, form)
+
+<li>User: <B>$order.Client_username</B></li>
+<li>House ID: <B>$order.idHouse</B>.</li>
+<li>Renting length: <B>$order.duration</B> Months.</li>
+<li>Rental starts at <B>$order.startDate</B></li>
+<li>Cost is <B>$order.cost</B>
+
+<form action="" method="post">
+$:form.render()
+</form>
+
+
+<h2>Delete Order: $order.idHouse with User: $order.Client_username</h2>
+<form action="/deleteorder/$order.idHouse" method="post">
+    <input type="submit" value="Delete Order"/>
+</form>

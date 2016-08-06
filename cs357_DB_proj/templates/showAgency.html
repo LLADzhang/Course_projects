@@ -1,0 +1,19 @@
+$def with (agency, form, agencyhashouse)
+
+<h1>Edit Agency: $agency.idAgency</h1>
+<ul>
+$for agent in agencyhashouse:
+    <li>he has house <B>$agent.idHouse</B> 
+    <a href="/delete/aghashouse/$agent.idHouse">delete</a>
+    </li>
+</ul>
+
+<form action="" method="post">
+$:form.render()
+</form>
+
+
+<h2>Delete $agency.idAgency</h2>
+<form action="/delete/agency/$agency.idAgency" method="post">
+    <input type="submit" value="Delete Agency"/>
+</form>

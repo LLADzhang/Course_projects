@@ -1,0 +1,13 @@
+$def with (client, form)
+
+<h1>Edit User: $client.username</h1>
+
+<form action="" method="post">
+$:form.render()
+</form>
+
+
+<h2>Delete $client.username</h2>
+<form action="/delete/$client.idClient" method="post">
+    <input type="submit" value="Delete Client"/>
+</form>

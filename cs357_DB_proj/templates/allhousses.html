@@ -1,0 +1,15 @@
+$def with (houses, houses)
+<h1>=All houses information</h1>
+
+<ul>
+$for house in houses:
+    <li>House id: <B>$house.idHouse</B></li>
+    <li>House type: <B>$house.type</B></li>
+    <li>House year: <B>$house.year</B></li>
+    <li>House locates: <B>$house.locationHouse</B></li>
+    <li>House status: <B>$house.ordered_status</B> (0: free, 1: ordered</li>
+</ul>
+
+<form name="" method="post"> 
+$:form.render()
+</form>

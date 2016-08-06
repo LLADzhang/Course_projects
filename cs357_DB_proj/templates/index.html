@@ -1,0 +1,12 @@
+$def with (clients)
+
+<h1>Welcome to House Rent</h1>
+
+<ul>
+$for client in clients:
+    <li>
+        <a href="/view/$client.idClient">$client.username</a> 
+        joined us from $datestr(client.created_time) 
+        <a href="/edit/$client.idClient">Edit</a>
+    </li>
+</ul>

@@ -1,0 +1,14 @@
+$def with (form, visitors)
+<h1>Here is visiting list</h1>
+
+<ul>
+$for visitor in visitors:
+    <li>
+         <a href="/editvisitor/$visitor.Client_username/$visitor.dateVisit"><B>$visitor.Client_username</B></a>
+        will visit house <B>no.$visitor.House_idHouse</B> at <B>$visitor.locationHouse</B> on <B>$visitor.dateVisit</B> accompanied by Agency: <B>$visitor.Agency_idAgency</B>
+    </li>
+</ul>
+
+<form name="" method="post"> 
+$:form.render()
+</form>

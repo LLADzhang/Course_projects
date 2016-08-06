@@ -1,0 +1,13 @@
+$def with (form, houses)
+<h1>Available houses</h1>
+
+<ul>
+$for house in houses:
+    <li>
+         House id: <a href="/houseid/$house.idHouse"><B> $house.idHouse</B></a> with Agency: <B>$house.Agency_idAgency</B> 
+    </li>
+</ul>
+
+<form name="" method="post"> 
+$:form.render()
+</form>
