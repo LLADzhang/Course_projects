@@ -1,0 +1,14 @@
+# Mac .DS_Store files
+.DS_Store
+
+# generated files
+bin/
+build/
+*.o
+*.a
+
+#
+*.json
+
+# backup files
+bak/
